@@ -23,18 +23,18 @@ spec:
         - name: USER_NAME
           valueFrom:
             secretKeyRef:
-              key: mongo-secret
-              name: mongo-user
+              name: mongo-secret
+              key: mongo-user
         - name: USER_PWD
           valueFrom:
             secretKeyRef:
-              key: mongo-secret
-              name: mongo-password
+              name: mongo-secret
+              key: mongo-password
         - name: DB_URL
           valueFrom:
             configMapKeyRef:
-              key: mongo-config
-              name: mongo-url
+              name: mongo-config
+              key: mongo-url
 ---
 apiVersion: v1
 kind: Service
